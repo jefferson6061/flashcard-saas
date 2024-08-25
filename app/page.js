@@ -56,7 +56,8 @@ export default function Home() {
   }
 
   return (
-    <Container maxWidth="100vw">
+
+    <Container maxWidth="100vw" sx={{ backgroundColor: '#00011e' }}>
       <Head>
         <title>Flashcard Saas</title>
         <meta name="description" content="Create flashcard from your text" />
@@ -75,15 +76,18 @@ export default function Home() {
           </SignedIn>
         </Toolbar>
       </AppBar>   
-      <Box sx={{ textAlign: 'center', my: 4 }}>
-        <Typography variant="h2">Welcome to Flashcard SaaS</Typography>
-        <Typography variant="h5">
-          The easiest way to make flashcards from your text
-        </Typography>
-        <Button variant="contained" color="primary" sx={{ mt: 2 }} href="/generate">
-          Get Started
-        </Button>
-      </Box>
+      <Box sx={{ textAlign: 'center', my: 8, py: 8 }}>
+  <Typography variant="h2" sx={{ display: 'block', lineHeight: 1.2, color: "#e5e7eb"}}>
+    Welcome to <br/> Flashcard<br />SaaS
+  </Typography>
+  <Typography variant="h5" sx={{ mt: 4, color: "#e5e7eb"}}>
+    The easiest way to make flashcards from your text
+  </Typography>
+  <Button variant="contained"sx={{ mt: 3, color: "#e5e7eb" }} href="/generate">
+    Get Started
+  </Button>
+</Box>
+
       <Box sx={{ my: 6 }}>
         <Typography variant="h6">Features</Typography>
         <Grid container spacing={4}>
@@ -170,5 +174,6 @@ export default function Home() {
         </Grid>
       </Box>
     </Container>
+
   );
 }
